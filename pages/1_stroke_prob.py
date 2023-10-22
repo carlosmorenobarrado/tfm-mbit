@@ -32,11 +32,13 @@ def stroke_prob() -> None:
     
     input_data = [[iterations_1, iterations_2, iterations_3, iterations_4]]
     output = modelo_cargado.predict(input_data)
-    
-    if output == 0:
-        st.write("No parece haber probabilidad de Ictus, aunque siempre es recomendable una revisión médica.")
-    elif output == 1:
-        st.write("Te recomendamos que durante el próximo año estés pendiente de tu salud y que te hagas un reconocimiento médico cuanto antes.")
+    if iterations_1 != 0 and iterations_2 != 0 and iterations_3 != 0 and iterations_4 != 0:
+        if output == 0:
+            st.write("No parece haber probabilidad de Ictus, aunque siempre es recomendable una revisión médica.")
+        elif output == 1:
+            st.write("Te recomendamos que durante el próximo año estés pendiente de tu salud y que te hagas un reconocimiento médico cuanto antes.")
+    else:
+        print("Introduzca sus datos en la barra de la izquierda por favor.")        
 
 st.set_page_config(page_title="Stroke Probability", page_icon="📹")
 st.markdown("# Stroke Prob")

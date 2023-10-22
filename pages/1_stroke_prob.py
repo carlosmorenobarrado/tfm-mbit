@@ -36,7 +36,7 @@ def stroke_prob() -> None:
         if output == 0:
             st.write("No parece haber probabilidad de Ictus, aunque siempre es recomendable una revisión médica.")
         elif output == 1:
-            st.write("Te recomendamos que durante el próximo año estés pendiente de tu salud y que te hagas un reconocimiento médico cuanto antes.")
+            st.write("Hay probabilidad de Ictus en el proximo año. Te recomendamos que durante el próximo año estés pendiente de tu salud y que te hagas un reconocimiento médico cuanto antes.")
     else:
         print("Introduzca sus datos en la barra de la izquierda por favor.")        
 
